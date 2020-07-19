@@ -1,3 +1,17 @@
 body {
-	background-color: red;
+	background-color: gray;
+	margin          : 0;
+}
+
+.section {
+	border    : 1px solid rgb(39, 39, 56);
+	height    : 100%;
+	min-height: 20px;
+
+}
+
+.header {
+	position        : sticky;
+	top             : 0;
+	background-color: aqua;
 }
