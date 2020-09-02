@@ -16,6 +16,7 @@
 
 body {
 	background-color: black;
+	color           : white;
 	margin          : 0;
 	font-family     : "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -24,13 +25,24 @@ p {
 	text-align: left;
 }
 
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	margin       : 0;
+	margin-bottom: 1.2em;
+	font-size    : 3em;
+}
+
 .section {
 	display       : flex;
 	flex-direction: column;
 	align-items   : center;
-	min-height    : 90%;
+	min-height    : 70%;
 	position      : relative;
 	padding       : 20px;
+	padding-top   : 50px;
 	padding-bottom: 150px;
 }
 
@@ -59,7 +71,11 @@ p {
 	padding-bottom      : var(--padding-vertical);
 	padding-left        : var(--padding-horizontal);
 	padding-right       : var(--padding-horizontal);
+}
 
+.header h1 {
+	display  : inline-block;
+	font-size: 1em;
 }
 
 .header a:not(.button) {
@@ -91,6 +107,7 @@ em.underline {
 	text-decoration: underline var(--highlight);
 	font-style     : normal;
 }
+
 
 .button {
 	background     : var(--highlight);
@@ -148,6 +165,8 @@ em.underline {
 #projects {
 	background: var(--section-projects-bg);
 	color     : var(--section-projects-fg);
+
+	--highlight: var(--section-intro-bg);
 }
 
 #projects .wave path {
