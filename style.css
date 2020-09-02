@@ -1,17 +1,159 @@
+:root {
+	--highlight: rgb(255, 210, 9);
+
+	--section-intro-bg: white;
+	--section-intro-fg: black;
+
+	--section-projects-bg: var(--highlight);
+	--section-projects-fg: black;
+
+	--section-about-us-bg: white;
+	--section-about-us-fg: black;
+
+	--footer-bg: black;
+	--footer-fg: white;
+}
+
 body {
-	background-color: gray;
+	background-color: black;
 	margin          : 0;
+	font-family     : "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+	text-align: left;
 }
 
 .section {
-	border    : 1px solid rgb(39, 39, 56);
-	height    : 100%;
-	min-height: 20px;
+	display       : flex;
+	flex-direction: column;
+	align-items   : center;
+	min-height    : 90%;
+	position      : relative;
+}
 
+.section h3 {
+	font-size      : 1.4em;
+	font-weight    : 600;
+	text-decoration: underline solid var(--highlight);
+}
+
+.section p {
+	max-width: 40em;
+	font-size: 1.2em;
 }
 
 .header {
-	position        : sticky;
-	top             : 0;
-	background-color: aqua;
+	z-index      : 100;
+	position     : sticky;
+	top          : 0;
+	border-bottom: 1px solid black;
+	background   : white;
+	text-align   : center;
+
+	--padding-vertical  : 20px;
+	--padding-horizontal: 20px;
+	padding-top         : var(--padding-vertical);
+	padding-bottom      : var(--padding-vertical);
+	padding-left        : var(--padding-horizontal);
+	padding-right       : var(--padding-horizontal);
+
+}
+
+.header a:not(.button) {
+	text-decoration: none;
+	font-weight    : bold;
+	color          : black;
+	padding-left   : 20px;
+	padding-right  : 20px;
+	font-size      : 1.2em;
+	border-radius  : 3px;
+}
+
+.header a:not(.button):hover {
+	background     : var(--highlight);
+	text-decoration: underline solid black;
+}
+
+em.underline {
+	text-decoration: underline var(--highlight);
+	font-style     : normal;
+}
+
+.button {
+	background     : var(--highlight);
+	padding        : 10px;
+	font-size      : 1.2em;
+	font-weight    : bold;
+	margin         : 20px;
+	border-radius  : 6px;
+	cursor         : pointer;
+	user-select    : none;
+	text-decoration: none;
+	color          : black;
+}
+
+.button:hover {
+	background: black;
+	color     : var(--highlight);
+}
+
+.wave {
+	height  : 150px;
+	overflow: hidden;
+	width   : 100%;
+	position: absolute;
+	bottom  : 0;
+}
+
+.wave svg {
+	height: 100%;
+	width : 100%;
+}
+
+.wave path {
+	fill  : black;
+	stroke: none;
+}
+
+#intro {
+	background: var(--section-intro-bg);
+	color     : var(--section-intro-fg);
+}
+
+#intro h1 {
+	font-size: 3em;
+}
+
+#intro .brand {
+	text-decoration: underline var(--highlight);
+}
+
+#intro .wave path {
+	fill: var(--section-projects-bg);
+}
+
+#projects {
+	background: var(--section-projects-bg);
+	color     : var(--section-projects-fg);
+}
+
+#projects .wave path {
+	fill: var(--section-about-us-bg);
+}
+
+#about-us {
+	background: var(--section-about-us-bg);
+	color     : var(--section-about-us-fg);
+}
+
+#about-us .wave path {
+	fill: var(--footer-bg);
+}
+
+#footer {
+	background: var(--footer-bg);
+	color     : var(--footer-fg);
+
+	text-align: center;
 }
